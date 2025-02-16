@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First William Oktona - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Portfolio William</div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about" onclick="toggleMenu()">About Me</a></li>
+                <li><a href="#education" onclick="toggleMenu()">Education</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#certifications" onclick="toggleMenu()">Certifications</a></li>
+                <li><a href="#address" onclick="toggleMenu()">Address</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="profile">
+                <img src="assets/images/profile.jpg" alt="First William Oktona">
+                <h1>First William Oktona</h1>
+                <p>I'am a<h1 id="animated-text" style="color: #2163f3;"></p></h1>
+                <p>Age: 22 | Born: 2 October 2002</p>
+                <p>Location: Dumai, Indonesia</p>
+                <div class="social-links">
+                    <a href="https://github.com/firstwilliamoktona"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/first-william-oktona-793763271/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/firstwilliam._/"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        const roles = ["Web Developer", "Graphic Designer", "Video Editor"];
+        let index = 0;
+        const textElement = document.getElementById("animated-text");
+    
+        function animateText() {
+            textElement.textContent =  roles[index];
+            index = (index + 1) % roles.length;
+            setTimeout(animateText, 2000); // Ubah setiap 2 detik
+        }
+    
+        animateText();
+    </script>
+    
+    <section id="personal" class="section">
+        <div class="container">
+            <h1>About Me</h1>
+            <p>Hi! I'm First William Oktona, a graduate of SMKN 2 Dumai in Computer Network Engineering (TKJ) and currently pursuing a degree in Informatics Engineering at STT Dumai. I’m from Dumai, Riau, Indonesia, and passionate about Web Development, Graphic Design, Photo Editing, and Video Editing, combining technical expertise with creativity to deliver impactful results. I believe in continuous learning and aim to contribute to meaningful projects that solve real-world problems. My future goal is to build a successful career in the tech industry, collaborating with innovative teams to create solutions that make a difference.</p>
+            
+            <a href="cv.pdf" download class="btn-download">Download CV</a>
+        </div>
+    </section>
+    
+
+    <section id="education" class="section">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="card">
+                <h3>Bachelor of Computer Science (Undergraduated)</h3>
+                <p>STT Dumai (2021 - 2025)</p>
+            </div>
+            <div class="card">
+                <h3>Teknik Komputer Jaringan</h3>
+                <p>SMK N 2 Dumai (2017 - 2020)</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="card">
+                <h3>Freelance (September 2022 - Now)</h3>
+                <p>- Melakukan jasa joki tugas kuliah (Makalah, Powerpoint,dll)</p>
+
+                <p>    - Melakukan jasa desain grafis seperti pembuatan kartu nama, spanduk, logo, majalah dan sebagainya</p>
+                    
+                <p>   - Melakukan jasa pembuatan website sederhana (Landing Page)</p>
+                    
+                <p>   - Melakukan jasa pembuatan game sederhana menggunakan greenfoot dan Mit App Inventor</p>
+                    
+                <p>   - Melakukan jasa pengeditan video (video pembelajaran, iklan, tugas, cinematic, short movie) menggunakan Adobe Premiere, Filmora, dan Capcut</p>
+                    
+                <p>   - Melakukan jasa pembuatan animasi 2D menggunakan Adobe After Effect</p>
+                    
+                <p>   - Melakukan jasa service/reparasi smartphone (service LCD, baterai, tombol dan komponen lainnya)</p>
+                    
+                <p>  - Melakukan jasa instalasi OS (Windows maupun Android)</p>
+            </div>
+            <div class="card">
+                <h3>School Internship - Millenium Computer & Gadget (Oktober 2019 - Desember 2019)</h3>
+                <p> - Mengatasi Trouble (troubleshooting) pada komputer, printer dan smartphone yang bermasalah (lcd, baterai, tombol dan komponen lainnya)</p>
+
+                    <p>- Melakukan instalasi software (OS/aplikasi lainnya) dan driver pada komputer, smartphone dan printer</p>
+                
+                        <p> - Membantu pemasangan atau perakitan komponen pada komputer atau laptop</p>
+                
+                            <p>-  Membantu dalam pemasangan kabel LAN </p>
+            </div>
+            <div class="card">
+                <h3>School Internship - PT Duta Infomedia/Links Technology (Maret 2019 - Mei 2019)</h3>
+                <p>- Melakukan instalasi jaringan internet menggunakan Access point, Mikrotik (DHCP) pada rumah, toko dan kantor.</p>
+
+                    <p>  - Melakukan Instalasi CCTV pada rumah,toko dan kantor.</p>
+                    
+                        <p>  - Melakukan maintenance atau perbaikan jaringan dan pemasangan kabel LAN.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="section">
+        <div class="container">
+            <h2>Certifications</h2>
+            <div class="certifications-grid">
+                <!-- Sertifikat 1 -->
+                <div class="certification-card">
+                    <img src="assets/certificates/c1.jpg" alt="Certification 1" class="certification-image">
+                    <div class="overlay">
+                        <button class="view-button" onclick="openModal('assets/certificates/cert1.jpg')">View</button>
+                    </div>
+                </div>
+                <!-- Sertifikat 2 -->
+                <div class="certification-card">
+                    <img src="assets/certificates/c2.jpg" alt="Certification 2" class="certification-image">
+                    <div class="overlay">
+                        <button class="view-button" onclick="openModal('assets/certificates/cert2.jpg')">View</button>
+                    </div>
+                </div>
+                <!-- Sertifikat 3 -->
+                <div class="certification-card">
+                    <img src="assets/certificates/c3.jpg" alt="Certification 3" class="certification-image">
+                    <div class="overlay">
+                        <button class="view-button" onclick="openModal('assets/certificates/cert3.jpg')">View</button>
+                    </div>
+                </div>
+                <!-- Sertifikat 4 -->
+                <div class="certification-card">
+                    <img src="assets/certificates/c4.jpg" alt="Certification 4" class="certification-image">
+                    <div class="overlay">
+                        <button class="view-button" onclick="openModal('assets/certificates/cert4.jpg')">View</button>
+                    </div>
+                </div>
+                <!-- Sertifikat 5 -->
+                <div class="certification-card">
+                    <img src="assets/certificates/c5.jpg" alt="Certification 5" class="certification-image">
+                    <div class="overlay">
+                        <button class="view-button" onclick="openModal('assets/certificates/cert5.jpg')">View</button>
+                    </div>
+                </div>
+                <!-- Sertifikat 6 -->
+                <div class="certification-card">
+                    <img src="assets/certificates/c6.jpg" alt="Certification 6" class="certification-image">
+                    <div class="overlay">
+                        <button class="view-button" onclick="openModal('assets/certificates/cert6.jpg')">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modal untuk Zoom Sertifikat -->
+    <div id="certificationModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <section id="address" class="section">
+        <div class="mapss">
+            <h2>Address</h2>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.119745741588!2d101.45801879999999!3d1.6719327000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d3af72abc5d603%3A0x23f494f6c2d11c4a!2sWilliam%20Website!5e0!3m2!1sid!2sid!4v1739708482872!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
+                width="100%" 
+                height="250" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 First William Oktona. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+   
+</body>
+</html>
