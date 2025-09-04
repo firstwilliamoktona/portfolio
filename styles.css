@@ -32,53 +32,26 @@ header {
 .light-mode header {
     background: rgba(245, 247, 250, 0.8);
 }
-/* Support By Section */
-#support {
-    text-align: center;
-    padding: 60px 20px;
-    background: var(--secondary);
-}
-
-#support h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: var(--primary);
-}
-
+/* Container support-logos diatur flex horizontal */
 .support-logos {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
+    flex-wrap: nowrap; /* agar tidak wrap ke bawah */
+    gap: 20px; /* jarak antar logo */
+    overflow-x: auto; /* jika terlalu banyak, bisa scroll horizontal */
+    padding: 10px 0;
 }
-
+/* Logo card styling */
 .logo-card {
-    background: white;
-    border-radius: 15px;
-    padding: 15px;
-    width: 120px;
-    height: 120px;
+    flex: 0 0 auto; /* agar ukuran tetap */
+    width: 100px; /* ukuran logo */
+    height: 100px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.logo-card img {
-    max-width: 80px;
-    max-height: 80px;
-    transition: transform 0.5s ease;
-}
-
-.logo-card:hover {
-    transform: scale(1.15) rotate(8deg);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-}
-
-.logo-card:hover img {
-    transform: rotate(-8deg);
-}
+    align-items: center;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 
 nav {
