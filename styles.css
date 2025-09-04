@@ -32,26 +32,35 @@ header {
 .light-mode header {
     background: rgba(245, 247, 250, 0.8);
 }
-/* Container support-logos diatur flex horizontal */
+
+
+
+New Chat
+64 lines
+
+/* Container support-logos sebagai area animasi */
 .support-logos {
-    display: flex;
-    flex-wrap: nowrap; /* agar tidak wrap ke bawah */
-    gap: 20px; /* jarak antar logo */
-    overflow-x: auto; /* jika terlalu banyak, bisa scroll horizontal */
-    padding: 10px 0;
+    position: relative;
+    width: 300px;  /* ukuran area lingkaran */
+    height: 300px;
+    margin: 0 auto;
 }
-/* Logo card styling */
+/* Logo card diatur absolute agar bisa diposisikan melingkar */
 .logo-card {
-    flex: 0 0 auto; /* agar ukuran tetap */
-    width: 100px; /* ukuran logo */
-    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    margin: -40px; /* setengah ukuran untuk pusat */
+    border-radius: 50%;
+    background-color: #f5f5f5;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
-    background-color: #f5f5f5;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
+}
 
 
 nav {
