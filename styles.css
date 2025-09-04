@@ -36,7 +36,7 @@ header {
 
 #support {
     position: relative;
-    height: 350px; /* cukup tinggi untuk animasi */
+    height: 400px; /* lebih tinggi biar muat semua */
     overflow: visible;
 }
 
@@ -48,52 +48,52 @@ header {
     animation: spin 20s linear infinite;
 }
 
-/* Posisi logo di orbit */
+/* logo di orbit */
 .logo-card {
     position: absolute;
     top: 50%;
     left: 50%;
     width: 80px;
     height: 80px;
-    margin: -40px; /* setengah ukuran untuk pusat */
+    margin: -40px; 
     border-radius: 50%;
     background-color: #f5f5f5;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Gambar di dalam logo-card */
+/* gambar di dalam logo-card */
 .logo-card img {
     max-width: 70%;
     max-height: 70%;
     object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
-/* Posisi tiap logo di lingkaran dengan transform rotate dan translate */
+/* posisi di lingkaran */
 .logo-card:nth-child(1) { transform: rotate(0deg) translate(120px) rotate(0deg); }
-.logo-card:nth-child(2) { transform: rotate(51.4deg) translate(120px) rotate(-51.4deg); }
-.logo-card:nth-child(3) { transform: rotate(102.8deg) translate(120px) rotate(-102.8deg); }
-.logo-card:nth-child(4) { transform: rotate(154.2deg) translate(120px) rotate(-154.2deg); }
-.logo-card:nth-child(5) { transform: rotate(205.6deg) translate(120px) rotate(-205.6deg); }
-.logo-card:nth-child(6) { transform: rotate(257deg) translate(120px) rotate(-257deg); }
-.logo-card:nth-child(7) { transform: rotate(308.4deg) translate(120px) rotate(-308.4deg); }
+.logo-card:nth-child(2) { transform: rotate(45deg) translate(120px) rotate(-45deg); }
+.logo-card:nth-child(3) { transform: rotate(90deg) translate(120px) rotate(-90deg); }
+.logo-card:nth-child(4) { transform: rotate(135deg) translate(120px) rotate(-135deg); }
+.logo-card:nth-child(5) { transform: rotate(180deg) translate(120px) rotate(-180deg); }
+.logo-card:nth-child(6) { transform: rotate(225deg) translate(120px) rotate(-225deg); }
+.logo-card:nth-child(7) { transform: rotate(270deg) translate(120px) rotate(-270deg); }
+.logo-card:nth-child(8) { transform: rotate(315deg) translate(120px) rotate(-315deg); }
 
-/* Animasi putar orbit-container */
+/* animasi putar orbit */
 @keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
 }
 
-/* Hover zoom */
+/* efek hover */
+.logo-card:hover img {
+    transform: scale(1.3); /* zoom logo aja, orbit tetap */
+}
 .logo-card:hover {
-    transform: scale(1.2) !important; /* override posisi */
     z-index: 10;
     box-shadow: 0 8px 15px rgba(33, 99, 243, 0.6);
     cursor: pointer;
