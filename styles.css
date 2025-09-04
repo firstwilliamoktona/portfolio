@@ -36,7 +36,7 @@ header {
 
 #support {
     position: relative;
-    height: 350px;
+    height: 350px; /* cukup tinggi untuk animasi */
     overflow: visible;
 }
 
