@@ -34,34 +34,137 @@ header {
 }
 
 
+/* Pastikan section support relative untuk posisi absolut anak */
+#support {
+    position: relative;
+    height: 350px; /* tinggi section agar cukup ruang animasi */
+    overflow: visible;
+}
+
+/* Container support-logos dibuat relative dan full width */
 .support-logos {
-    animation: rotate 20s linear infinite;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
-/* Posisi tiap logo di lingkaran dengan transform rotate dan translate */
-.logo-card:nth-child(1) { transform: rotate(0deg) translate(120px) rotate(-0deg); }
-.logo-card:nth-child(2) { transform: rotate(51.4deg) translate(120px) rotate(-51.4deg); }
-.logo-card:nth-child(3) { transform: rotate(102.8deg) translate(120px) rotate(-102.8deg); }
-.logo-card:nth-child(4) { transform: rotate(154.2deg) translate(120px) rotate(-154.2deg); }
-.logo-card:nth-child(5) { transform: rotate(205.6deg) translate(120px) rotate(-205.6deg); }
-.logo-card:nth-child(6) { transform: rotate(257deg) translate(120px) rotate(-257deg); }
-.logo-card:nth-child(7) { transform: rotate(308.4deg) translate(120px) rotate(-308.4deg); }
-/* Animasi rotasi container */
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+
+/* Logo card diposisikan absolute agar bisa animasi keliling */
+.logo-card {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
+
+/* Gambar di dalam logo-card */
+.logo-card img {
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain;
+}
+
+/* Animasi keliling section support */
+/* Kita buat keyframes untuk tiap logo dengan delay berbeda agar posisi berbeda */
+
+@keyframes orbit1 {
+    0%   { top: 10%; left: 50%; }
+    25%  { top: 50%; left: 90%; }
+    50%  { top: 90%; left: 50%; }
+    75%  { top: 50%; left: 10%; }
+    100% { top: 10%; left: 50%; }
+}
+
+@keyframes orbit2 {
+    0%   { top: 20%; left: 60%; }
+    25%  { top: 60%; left: 85%; }
+    50%  { top: 80%; left: 60%; }
+    75%  { top: 60%; left: 15%; }
+    100% { top: 20%; left: 60%; }
+}
+
+@keyframes orbit3 {
+    0%   { top: 30%; left: 40%; }
+    25%  { top: 70%; left: 80%; }
+    50%  { top: 85%; left: 40%; }
+    75%  { top: 70%; left: 20%; }
+    100% { top: 30%; left: 40%; }
+}
+
+@keyframes orbit4 {
+    0%   { top: 40%; left: 55%; }
+    25%  { top: 75%; left: 75%; }
+    50%  { top: 85%; left: 55%; }
+    75%  { top: 75%; left: 25%; }
+    100% { top: 40%; left: 55%; }
+}
+
+@keyframes orbit5 {
+    0%   { top: 25%; left: 45%; }
+    25%  { top: 65%; left: 85%; }
+    50%  { top: 80%; left: 45%; }
+    75%  { top: 65%; left: 15%; }
+    100% { top: 25%; left: 45%; }
+}
+
+@keyframes orbit6 {
+    0%   { top: 15%; left: 50%; }
+    25%  { top: 55%; left: 90%; }
+    50%  { top: 85%; left: 50%; }
+    75%  { top: 55%; left: 10%; }
+    100% { top: 15%; left: 50%; }
+}
+
+@keyframes orbit7 {
+    0%   { top: 20%; left: 60%; }
+    25%  { top: 60%; left: 80%; }
+    50%  { top: 80%; left: 60%; }
+    75%  { top: 60%; left: 20%; }
+    100% { top: 20%; left: 60%; }
+}
+
+/* Terapkan animasi dengan durasi dan delay berbeda agar tidak serempak */
+.logo-card:nth-child(1) {
+    animation: orbit1 12s linear infinite;
+}
+
+.logo-card:nth-child(2) {
+    animation: orbit2 14s linear infinite;
+}
+
+.logo-card:nth-child(3) {
+    animation: orbit3 16s linear infinite;
+}
+
+.logo-card:nth-child(4) {
+    animation: orbit4 18s linear infinite;
+}
+
+.logo-card:nth-child(5) {
+    animation: orbit5 20s linear infinite;
+}
+
+.logo-card:nth-child(6) {
+    animation: orbit6 22s linear infinite;
+}
+
+.logo-card:nth-child(7) {
+    animation: orbit7 24s linear infinite;
+}
+
 /* Hover zoom */
 .logo-card:hover {
-    transform: scale(1.2) !important; /* !important agar override posisi */
+    transform: scale(1.2);
     z-index: 10;
     box-shadow: 0 8px 15px rgba(33, 99, 243, 0.6);
     cursor: pointer;
 }
-/* Gambar di dalam logo-card */
+
 
 nav {
     display: flex;
