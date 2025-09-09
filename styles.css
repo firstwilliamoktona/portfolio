@@ -98,7 +98,15 @@ nav {
     font-weight: 600;
     color: #667eea;
 }
-
+nav {
+    display: flex
+;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 /* Navigasi Link */
 .nav-links {
     display: flex;
