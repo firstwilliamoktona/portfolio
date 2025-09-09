@@ -35,6 +35,8 @@ header {
 
 /* Support By Section */
 #support {
+    text-align: cent/* Support By Section */
+#support {
     text-align: center;
     padding: 60px 20px;
     background: var(--secondary);
