@@ -256,31 +256,66 @@ nav {
   opacity: 0.9;
 }
 
-/* Support Logos */
-.support-logos {
+/* ===== Support Section Orbit Style ===== */
+#support {
+  position: relative;
+  height: 450px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  align-items: center;
   justify-content: center;
 }
 
+.support-logos {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  animation: spin 30s linear infinite;
+}
+
 .logo-card {
+  position: absolute;
+  width: 70px;
+  height: 70px;
   background: var(--card-light);
-  padding: 1rem;
-  border-radius: var(--radius);
+  border-radius: 50%;
   box-shadow: var(--shadow);
-  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
 }
 
 .logo-card img {
-  width: 50px;
-  height: auto;
-  display: block;
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
 }
 
+/* Hover efek logo */
 .logo-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.2);
 }
+
+/* Posisi tiap logo mengelilingi lingkaran */
+.logo-card:nth-child(1) { top: 0; left: 50%; transform: translate(-50%, -50%); }
+.logo-card:nth-child(2) { top: 20%; right: -5%; transform: translate(0, -50%); }
+.logo-card:nth-child(3) { top: 50%; right: -10%; transform: translate(0, -50%); }
+.logo-card:nth-child(4) { bottom: 20%; right: -5%; transform: translate(0, 50%); }
+.logo-card:nth-child(5) { bottom: 0; left: 50%; transform: translate(-50%, 50%); }
+.logo-card:nth-child(6) { bottom: 20%; left: -5%; transform: translate(0, 50%); }
+.logo-card:nth-child(7) { top: 50%; left: -10%; transform: translate(0, -50%); }
+.logo-card:nth-child(8) { top: 20%; left: -5%; transform: translate(0, -50%); }
+.logo-card:nth-child(9) { top: -10%; left: 25%; transform: translate(-50%, 0); }
+.logo-card:nth-child(10){ top: -10%; right: 25%; transform: translate(50%, 0); }
+.logo-card:nth-child(11){ bottom: -10%; left: 50%; transform: translate(-50%, 0); }
+
+/* Animasi rotasi orbit */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
 
 /* Footer */
 footer {
